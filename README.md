@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +69,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+# ngo-rescue-hub
+A centralized web platform for animal rescue NGOs to manage rescue cases, animal care, adoptions, volunteer coordination, and public incident reports. Built to support faster response, transparency, and easier collaboration between NGOs and citizens.
+>>>>>>> 01a8daf6f8db1b9b6f539ad5e6062a58135be4cb
