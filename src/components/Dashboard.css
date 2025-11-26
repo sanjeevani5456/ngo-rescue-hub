@@ -1,0 +1,450 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap");
+
+:root {
+  --deep-indigo: #22223b;
+  --accent: #4a4e69;
+  --soft-lavender: #c9ada7;
+  --muted: #9a8c98;
+  --warm-beige: #f2e9e4;
+}
+
+.dashboard-container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f9f7f6, #f2e9e4);
+  font-family: "Quicksand", sans-serif;
+  padding: 20px 40px;
+}
+
+/* Header */
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  margin-bottom: 30px;
+}
+
+.header-logo {
+  background: rgba(74, 78, 105, 0.08);
+  border-radius: 10px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard-header h1 {
+  font-size: 20px;
+  color: var(--deep-indigo);
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.btn-secondary {
+  background: var(--soft-lavender);
+  color: var(--deep-indigo);
+  padding: 10px 16px;
+  border: none;
+  border-radius: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.btn-secondary:hover {
+  transform: translateY(-2px);
+}
+
+/* Stats Section */
+.stats-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 10px 30px rgba(34, 34, 59, 0.05);
+  transition: transform 0.2s ease;
+}
+.stat-card:hover {
+  transform: translateY(-6px);
+}
+.stat-icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(74, 78, 105, 0.1);
+  border-radius: 12px;
+  font-size: 24px;
+}
+.stat-card h3 {
+  color: var(--accent);
+  margin: 0;
+}
+.stat-card p {
+  color: var(--muted);
+  margin: 0;
+  font-weight: 600;
+}
+
+@keyframes floaty {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.icon-anim {
+  animation: floaty 3s ease-in-out infinite;
+}
+
+/* Reports Section */
+.reports-section {
+  margin-top: 8px;
+}
+.reports-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 18px;
+}
+.report-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(34, 34, 59, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.report-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 40px rgba(34, 34, 59, 0.09);
+}
+.report-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.status-badge {
+  border-radius: 20px;
+  padding: 6px 12px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 12px;
+}
+.status-submitted {
+  background: #f39c12;
+}
+.status-progress {
+  background: #3498db;
+}
+.status-resolved {
+  background: #27ae60;
+}
+
+/* Action buttons */
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+.btn-action {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn-progress {
+  background: var(--muted);
+}
+.btn-resolve {
+  background: #27ae60;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, var(--soft-lavender), #e6d7d2);
+  color: var(--deep-indigo);
+  font-weight: 700;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 14px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(74, 78, 105, 0.1);
+  transition: transform 0.2s ease;
+}
+.btn-primary:hover {
+  transform: translateY(-3px);
+}
+
+.form-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* === FORM STYLING === */
+
+.report-form {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 25px auto;
+  width: 90%;
+  max-width: 650px;
+  transition: 0.3s ease-in-out;
+}
+
+.report-form h3 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* Form groups */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #4a4a4a;
+}
+
+/* Inputs and textareas */
+.report-form input,
+.report-form textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.8px solid #c9ada7;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  background-color: #fdfdfd;
+  transition: 0.2s ease;
+}
+
+.report-form input:focus,
+.report-form textarea:focus {
+  border-color: #7b6d63;
+  box-shadow: 0 0 5px rgba(125, 104, 96, 0.3);
+}
+
+/* Submit button */
+.report-form .btn-primary {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  background-color: #a67873;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.report-form .btn-primary:hover {
+  background-color: #8b5e59;
+}
+
+/* For spacing between header and form */
+.dashboard-content .action-section {
+  margin-bottom: 25px;
+}
+
+/* Add spacing before "My Reports" */
+.reports-section {
+  margin-top: 40px;
+}
+
+/* === IMPROVED FORM LOOK === */
+
+.report-form {
+  background: linear-gradient(180deg, #ffffff 0%, #f9f7f6 100%);
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(34, 34, 59, 0.1);
+  margin: 40px auto;
+  width: 90%;
+  max-width: 720px;
+  transition: 0.3s ease-in-out;
+  border: 1px solid rgba(201, 173, 167, 0.3);
+}
+
+.report-form h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--deep-indigo);
+  margin-bottom: 24px;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+/* Form layout */
+.form-group {
+  margin-bottom: 22px;
+}
+
+/* Inputs and textareas with soft shadow */
+.report-form input,
+.report-form textarea,
+.report-form select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid rgba(201, 173, 167, 0.8);
+  border-radius: 12px;
+  outline: none;
+  background-color: #fcfafa;
+  font-size: 15px;
+  color: #2c2c2c;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(34, 34, 59, 0.05);
+}
+
+.report-form input:focus,
+.report-form textarea:focus {
+  border-color: var(--accent);
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(74, 78, 105, 0.1);
+}
+
+/* Labels */
+.report-form label {
+  display: block;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+/* Submit button improvement */
+.report-form .btn-primary {
+  width: 100%;
+  background: linear-gradient(90deg, #c9ada7, #b39b93);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 14px;
+  border-radius: 14px;
+  box-shadow: 0 6px 14px rgba(201, 173, 167, 0.4);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.report-form .btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(201, 173, 167, 0.5);
+}
+
+/* Add subtle hover to the cancel button (if any) */
+.btn-secondary {
+  background: rgba(201, 173, 167, 0.4);
+  color: var(--deep-indigo);
+  border: 1px solid rgba(201, 173, 167, 0.5);
+}
+
+.btn-secondary:hover {
+  background: rgba(201, 173, 167, 0.7);
+}
+
+/* Make placeholder text more refined */
+.report-form input::placeholder,
+.report-form textarea::placeholder {
+  color: #b4a9a4;
+  font-size: 0.9rem;
+}
+
+/* Slight animation when form loads */
+@keyframes fadeInForm {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.report-form {
+  animation: fadeInForm 0.5s ease forwards;
+}
+.reports-section h3 {
+  margin-bottom: 24px;
+  color: var(--deep-indigo);
+  font-weight: 700;
+}
+
+.reports-grid {
+  margin-top: 10px;
+}
+/* Ensure uniform spacing below report headers */
+.reports-section h3 {
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: var(--deep-indigo);
+}
+
+/* Report images */
+.report-image {
+  width: 100%;
+  border-radius: 12px;
+  margin: 10px 0;
+  object-fit: cover;
+  max-height: 220px;
+}
+
+/* Two-column form rows */
+.form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.half-width {
+  flex: 1;
+}
+
+
+.reports-section h3 {
+  margin-bottom: 16px;
+}
+
+.reports-grid {
+  display: grid;
+  gap: 20px;
+}

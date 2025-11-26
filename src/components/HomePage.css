@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap");
+
+:root {
+  --soft-lavender: #c9ada7;
+  --deep-indigo: #22223b;
+  --warm-beige: #f2e9e4;
+  --accent: #4a4e69;
+  --card-white: #ffffff;
+}
+
+body.home-bg {
+  background-color: var(--warm-beige);
+  font-family: "Quicksand", sans-serif;
+  color: var(--deep-indigo);
+  background-image: radial-gradient(
+      circle at 10% 20%,
+      rgba(201, 173, 167, 0.06) 0,
+      transparent 15%
+    ),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><g fill='%2322223B' fill-opacity='0.04'><path d='M60 40c8 0 14 6 14 14s-6 14-14 14-14-6-14-14 6-14 14-14z'/><circle cx='36' cy='26' r='6'/><circle cx='84' cy='26' r='6'/></g></svg>");
+  background-repeat: repeat;
+  background-size: 360px 360px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Header */
+.home-header {
+  background: linear-gradient(180deg, rgba(34, 34, 59, 0.95), rgba(74, 78, 105, 0.98));
+  color: var(--warm-beige);
+  text-align: center;
+  padding: 48px 20px 40px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 8px 30px rgba(34, 34, 59, 0.18);
+}
+
+.logo-img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  background: var(--warm-beige);
+  border-radius: 50%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.home-header h1 {
+  font-size: 2.2rem;
+  margin: 8px 0 4px;
+  font-weight: 700;
+}
+.home-header .tagline {
+  color: var(--soft-lavender);
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+/* Hero Section */
+.hero-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 28px;
+  padding: 0 24px;
+  align-items: center;
+}
+.hero-content h2 {
+  font-size: 1.9rem;
+  margin-bottom: 12px;
+  color: var(--deep-indigo);
+}
+.hero-content p {
+  color: #6b6a75;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.cta-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-cta {
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  box-shadow: 0 6px 18px rgba(74, 78, 105, 0.12);
+  cursor: pointer;
+}
+.btn-join {
+  background: var(--accent);
+  color: var(--warm-beige);
+}
+.btn-report {
+  background: linear-gradient(90deg, var(--soft-lavender), #e6d7d2);
+  color: var(--deep-indigo);
+}
+.btn-donate {
+  background: #ffb4a2;
+  color: #fff;
+}
+.btn-cta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(74, 78, 105, 0.18);
+}
+
+/* Hero logo side */
+.hero-image-box {
+  display: flex;
+  justify-content: center;
+}
+.hero-logo {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  background: var(--warm-beige);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(34, 34, 59, 0.08);
+}
+
+/* Features */
+.features-section {
+  max-width: 1200px;
+  margin: 20px auto 60px;
+  padding: 0 24px;
+  text-align: center;
+}
+.features-section h3 {
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+}
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.feature-card {
+  width: 300px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(242, 233, 228, 0.8));
+  border-radius: 16px;
+  padding: 30px 22px; /* ✅ Increased padding since buttons removed */
+  box-shadow: 0 12px 30px rgba(74, 78, 105, 0.08);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  min-height: 180px; /* ✅ Added min-height for consistent card sizes */
+}
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(74, 78, 105, 0.12);
+}
+.feature-card h4 {
+  color: var(--accent);
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+}
+.feature-card p {
+  color: #6b6a75;
+  line-height: 1.6;
+  margin-bottom: 0; /* ✅ Removed bottom margin since no buttons */
+}
+
+/* Footer */
+.home-footer {
+  background: var(--deep-indigo);
+  color: var(--warm-beige);
+  text-align: center;
+  padding: 26px;
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+  }
+  .hero-logo {
+    width: 240px;
+    height: 240px;
+    margin-top: 20px;
+  }
+  .feature-card {
+    width: calc(50% - 14px);
+  }
+}
+@media (max-width: 560px) {
+  .feature-card {
+    width: 100%;
+  }
+  .cta-buttons {
+    flex-direction: column;
+  }
+  .btn-cta {
+    width: 100%;
+    text-align: center;
+  }
+}
+/* ===== Under Construction Modal ===== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(34, 34, 59, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  background: var(--warm-beige);
+  border-radius: 20px;
+  padding: 40px 30px;
+  max-width: 450px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from { 
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to { 
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-icon {
+  font-size: 4rem;
+  margin-bottom: 15px;
+  animation: bounce 1s ease infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.modal-content h2 {
+  color: var(--deep-indigo);
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.modal-content p {
+  color: #6b6a75;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.modal-close-btn {
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: var(--accent);
+  color: var(--warm-beige);
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 15px rgba(74, 78, 105, 0.2);
+}
+
+.modal-close-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(74, 78, 105, 0.3);
+}
